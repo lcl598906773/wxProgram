@@ -1,0 +1,19 @@
+<view class="section tc">
+   <video id="myVideo" src="{{ src }}" hidden="{{videoHidden}}" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls></video> 
+  <view class="btn-area">
+    <button bindtap="bindButtonTap">获取视频</button>
+    <input bindblur="bindInputBlur" class='textq' placeholder='请输入弹幕'/>
+    <button bindtap="bindSendDanmu">发送弹幕</button>
+  </view>
+</view>
+<button bindtap = 'uploadImg' class=''>上传图片</button>
+<button bindtap = 'record' class='record'>录音</button>
+<button bindtap = 'login' class='record'>登录获取openid</button>
+<contact-button type="default-dark"  size="20" session-from="weapp">客服助理</contact-button>
+<input type='text' bindinput="IPInput"/>
+<button bindtap='checkIP'>查看IP</button>
+
+
+
+
+

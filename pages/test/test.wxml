@@ -1,0 +1,45 @@
+<!-- <view>{{ msg }}</view> -->
+<view class="section">
+  <text>账号</text>
+  <input type='text' bindinput ="userNameInput"/>
+</view>
+<view class="section">
+  <text>密码</text>
+  <input type='password' bindinput="passWdInput"/>
+</view>
+
+<button bindtap="clickMe">登录</button>
+<!-- <button bindtap='jumpVideo'>视频</button> -->
+<button bindtap='jumplog'>登录日志查看</button>
+<button bindtap='jumperweima'>二维码生成器</button>
+<!-- <button class='btn' bindtap='jumpreg'>注册</button> -->
+ <button class='btn' bindtap='powerDrawer' data-statu ='open'>注册</button> 
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}"> 
+   <label class="close" bindtap="powerDrawer" data-statu="close">关闭</label> 
+  <!--drawer content-->  
+  <view class="drawer_title" >注册</view> 
+  
+  <form bindsubmit='searchBox'>
+  <view class="drawer_content"> 
+        <view class="top grid"> 
+          <label class="title col-0">账号</label> 
+          <input type='text' class="input_base input_h30 col-1" name='name' bindinput='getName'></input> 
+        </view> 
+        <view class="top grid"> 
+          <label class="title col-0">密码</label> 
+          <input type='password' class="input_base input_h30 col-1" name="password" bindinput='getPwd'></input> 
+        </view> 
+        <view class="top grid"> 
+          <label class="title col-0">确认密码</label> 
+          <input type='password' class="input_base input_h30 col-1" name="email" bindinput='getEmail'></input> 
+        </view> 
+        <view class="top grid"> 
+          <label class="title col-0">手机</label> 
+          <input class="input_base input_h30 col-1" name="phone" bindinput='getPhone'></input> 
+        </view> 
+        <view>{{ tip }}</view>
+      <button class="btn_ok" bindtap="powerDrawer" data-statu="reg">注册</button> 
+  </view>
+   </form>
+   </view>
+   
